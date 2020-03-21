@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
                 "https://bradchao.com/wp",
                 new Response.Listener<String>(){
                     @Override
-                    public void onResponse(String response) {
+                    public void onResponse(String response) { //回呼回來以後才會觸發的, on是看時機觸發的
                         tv.setText(response);
                     }
                 },null);
