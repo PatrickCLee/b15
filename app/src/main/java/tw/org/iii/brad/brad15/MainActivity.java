@@ -22,11 +22,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         tv = findViewById(R.id.tv);
-        queue = Volley.newRequestQueue(this);
+        queue = Volley.newRequestQueue(this);       //*3  *1 宣告使用網路 *2 gradle implementation
     }
 
     public void test1(View view) {
-        StringRequest request = new StringRequest(Request.Method.GET,
+        StringRequest request = new StringRequest(Request.Method.GET,   //*4
                 "https://bradchao.com/wp",
                 new Response.Listener<String>(){
                     @Override
@@ -34,6 +34,6 @@ public class MainActivity extends AppCompatActivity {
                         tv.setText(response);
                     }
                 },null);
-        queue.add(request);
+        queue.add(request);                                             //*5
     }
 }
